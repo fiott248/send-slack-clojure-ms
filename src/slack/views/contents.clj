@@ -25,13 +25,16 @@
 (defn is-message? [message]
    (if (message) (send-to-slack "web-hook" message)))
 
-(defn slack [message]
-  [:div {:class "well"}
-   [:form {:role "form"}
-     [:div {:class "form-group"}
+(defn slack []
+  [:div {:class "well-large"}
+   [:form {:role "form" :method "post"}
+    [:div {:class "form-group"}
+      (label {:class "control-label"} "slack-Hook" "Slack Hook")
+      (text-field {:class "span7" :placeholder "slack hook" :ng-model "hook" :name "hook"} "hook")
       (label {:class "control-label"} "slack-field" "Slack Message")
-      (text-field {:class "form-control" :placeholder "text area" :ng-model "text"} "message")]]]
-  ;(is-message? message) //function that sends message to slack
+      (text-area {:class "span11" :placeholder "your message" :name "text" :rows "10" :cols "50"} "message")
+      (submit-button {:class "btn-primary" :style "display:block"} "submit")]
+      ]]
   )
 
 (defn not-found []
