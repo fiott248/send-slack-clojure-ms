@@ -7,7 +7,9 @@
             [slack.views.layout :as layout]
             [slack.views.contents :as contents]
             [clj-http.client :as client]
-            [clojure.data.json :as json]))
+            [clojure.data.json :as json])
+  (:gen-class)
+            )
 
 (defroutes routes
   (GET "/" [] (layout/application "Home" (contents/index)))

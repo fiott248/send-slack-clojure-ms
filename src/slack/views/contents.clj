@@ -7,7 +7,8 @@
 
 (defn index []
   [:div {:id "content"}
-   [:h1 {:class "text-success"} "Hello Hiccup"]]
+   [:h2 {:class "text-success"} "Welcome to simple Slack wrapper using clojure with hiccup"]
+   (link-to {:class "btn btn-primary"} "/slack" "Take me to Slack")]
   )
 
   (defn send-to-slack
@@ -22,8 +23,6 @@
     [url text]
     (client/post url {:form-params {:payload (json/write-str {:text text})}}))
 
-(defn is-message? [message]
-   (if (message) (send-to-slack "web-hook" message)))
 
 (defn slack []
   [:div {:class "well-large"}
