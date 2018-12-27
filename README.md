@@ -1,36 +1,29 @@
-# slack
+# slackhook-app
 
-FIXME: description
+A simple slack hook wrapper using clojure.
+
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Install Lein FIRST
+
+lein uberjar  
+
+docker build -t fiott248/slack-wrapper .
+
+docker run -p 8090:8090 fiott248/slack-wrapper
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar slack-0.1.0-standalone.jar [args]
+http://127.0.0.1:8090/slack
 
 ## Options
 
 FIXME: listing of options this app accepts.
 
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
 ## License
 
-Copyright © 2018 FIXME
+Copyright © 2018 Daniel Fiott
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
