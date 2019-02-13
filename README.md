@@ -9,9 +9,9 @@ Install Lein FIRST
 
 lein uberjar  
 
-docker build -t fiott248/slack-wrapper .
+docker pull fiott248/clojure-slack-wrapper:v1
 
-docker run -p 8090:8090 fiott248/slack-wrapper
+docker run -p 8090:8090 fiott248/clojure-slack-wrapper:v1
 
 ## Usage
 
